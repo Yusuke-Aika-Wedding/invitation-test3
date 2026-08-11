@@ -5,7 +5,7 @@ window.WEDDING_CONFIG = {
   gasWebAppUrl: 'https://script.google.com/macros/s/AKfycbwzSt6gRw6Vlf8aJa4urcOVNOrK6h08llnWv1ufEVWGPMfdPDTUoVW4WnECR9-sFo_Y/exec',
   weddingDateIso: '2027-03-21T10:00:00+09:00',
   // 本当の最後の謎をメニューに表示する日時です。この1行だけで変更できます。
-  finalPuzzleOpenIso: '2026-08-11T18:30:00+09:00',
+  finalPuzzleOpenIso: '2026-08-11T20:00:00+09:00',
   venueName: 'キンプトン新宿東京',
   venueUrl: 'https://www.kimptonshinjukuwedding.com/',
   mapQuery: 'キンプトン新宿東京',
