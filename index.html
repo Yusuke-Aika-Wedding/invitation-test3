@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#fff8f3">
+  <title>Yusuke &amp; Aika Wedding Invitation</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;family=Old+Standard+TT:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-locked">
+  <div class="petal-layer" aria-hidden="true"></div>
+
+  <section id="authOverlay" class="auth-overlay" aria-labelledby="authTitle">
+    <div class="auth-card">
+      <div class="auth-photo" aria-hidden="true">
+        <img src="assets/gallery-1.jpg" alt="" loading="eager">
+      </div>
+      <div class="auth-content">
+        <p class="auth-kicker">Private Invitation</p>
+        <h1 id="authTitle">Welcome</h1>
+        <p class="auth-copy">
+          招待状に記載されたIDを<br class="sp-only">入力してください。
+        </p>
+        <form id="authForm" class="auth-form" novalidate>
+          <label for="guestIdEntry">Guest ID</label>
+          <input id="guestIdEntry" name="guestIdEntry" type="text" inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false" required placeholder="例：sfm549Eys">
+          <button id="authButton" class="primary-button" type="submit">Open Invitation</button>
+          <p id="authStatus" class="form-status" aria-live="polite"></p>
+        </form>
+        <p class="auth-note">一度認証すると、この端末では次回からID入力を省略できます。</p>
+      </div>
+    </div>
+  </section>
+
+  <header class="top-menu" aria-label="ページメニュー">
+    <button id="menuButton" class="hamburger" type="button" aria-label="メニューを開く" aria-controls="menuPanel" aria-expanded="false"><span></span></button>
+    <nav id="menuPanel" class="menu-panel" aria-label="メインメニュー">
+      <a href="#invitation" data-nav="invitation"><span>Invitation</span>招待状ページ</a>
+      <a href="#profile" data-nav="profile"><span>Profile</span>2人の紹介ページ</a>
+      <a id="finalPuzzleMenuLink" class="is-hidden" href="#final-puzzle" data-nav="final-puzzle"><span>Final Puzzle</span>本当の最後の謎ページ</a>
+      <div class="menu-divider" aria-hidden="true"></div>
+      <div class="guest-menu">
+        <p id="menuGuestName">Guest</p>
+        <button id="changeIdButton" type="button">IDを変更する</button>
+      </div>
+    </nav>
+  </header>
+
+  <div id="messageOverlay" class="message-overlay" role="button" tabindex="0" aria-label="招待状を開く" hidden>
+    <div class="message-shade" aria-hidden="true"></div>
+    <article class="message-card" aria-live="polite">
+      <p class="script-label">Dear Guest</p>
+      <h2 id="messageGuestName" class="message-name">ゲスト様</h2>
+      <p id="messageBody" class="message-text"></p>
+      <p class="message-signature">Yusuke &amp; Aika</p>
+      <div class="tap-guide">Tap to open</div>
+    </article>
+  </div>
+
+  <main class="site-shell">
+    <div id="invitationPage" class="page-view" data-page="invitation">
+      <section class="hero fade-in">
+        <div class="hero-slider" aria-label="新郎新婦の写真スライド">
+          <div class="hero-slide is-active"><img src="assets/gallery-2.jpg" alt="東京タワーと新郎新婦" loading="eager"></div>
+          <div class="hero-slide"><img src="assets/gallery-3.jpg" alt="海辺で撮影した新郎新婦" loading="lazy"></div>
+          <div class="hero-slide"><img src="assets/gallery-4.jpg" alt="野球場で撮影した新郎新婦" loading="lazy"></div>
+          <div class="slider-dots" aria-label="写真切り替え">
+            <button class="slide-dot is-active" type="button" aria-label="写真1"></button>
+            <button class="slide-dot" type="button" aria-label="写真2"></button>
+            <button class="slide-dot" type="button" aria-label="写真3"></button>
+          </div>
+        </div>
+        <div class="hero-copy">
+          <p class="script-label">Wedding Invitation</p>
+          <h1>Yusuke &amp; Aika</h1>
+          <p class="lead">
+            <span>平素より温かく見守ってくださり、<br class="sp-only">ありがとうございます。</span><br>
+            <span>皆様への感謝を込めて、<br class="sp-only">ささやかながら結婚式を執り行います。</span>
+          </p>
+        </div>
+      </section>
+
+      <section class="section fade-in" aria-labelledby="countdown-title">
+        <p class="section-kicker">Countdown</p>
+        <h2 id="countdown-title">Until Our Wedding</h2>
+        <p class="section-note">2027年3月21日 <span class="number-font">10:00</span> まで</p>
+        <div class="countdown-grid" aria-live="polite">
+          <div class="count-card"><span id="days" class="count-number">0</span><span class="count-label">Days</span></div>
+          <div class="count-card"><span id="hours" class="count-number">00</span><span class="count-label">Hours</span></div>
+          <div class="count-card"><span id="minutes" class="count-number">00</span><span class="count-label">Minutes</span></div>
+          <div class="count-card"><span id="seconds" class="count-number">00</span><span class="count-label">Seconds</span></div>
+        </div>
+      </section>
+
+      <section class="section fade-in" aria-labelledby="details-title">
+        <p class="section-kicker">Information</p>
+        <h2 id="details-title">Wedding Day</h2>
+        <div class="info-grid">
+          <article class="info-card"><h3>Date</h3><p><span class="number-font">2027.03.21</span><br>日曜日</p></article>
+          <article class="info-card"><h3>Ceremony</h3><p><span class="number-font">10:00〜10:30</span></p></article>
+          <article class="info-card"><h3>Reception</h3><p><span class="number-font">11:00〜14:00</span></p></article>
+        </div>
+      </section>
+
+      <section class="section fade-in" aria-labelledby="venue-title">
+        <p class="section-kicker">Access</p>
+        <h2 id="venue-title">Venue</h2>
+        <div class="venue-layout">
+          <article class="venue-card">
+            <h3 class="venue-name"><a href="https://www.kimptonshinjukuwedding.com/" target="_blank" rel="noopener">キンプトン新宿東京</a></h3>
+            <p>会場名をタップすると、公式HPを開けます。</p>
+            <p>当日はお気をつけてお越しください。</p>
+            <a class="button-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%AD%E3%83%B3%E3%83%97%E3%83%88%E3%83%B3%E6%96%B0%E5%AE%BF%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener">Open Google Maps</a>
+          </article>
+          <div class="map-card" aria-label="Google Map">
+            <iframe src="https://www.google.com/maps?q=%E3%82%AD%E3%83%B3%E3%83%97%E3%83%88%E3%83%B3%E6%96%B0%E5%AE%BF%E6%9D%B1%E4%BA%AC&amp;output=embed" title="キンプトン新宿東京の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="movie-card">
+          <video controls playsinline preload="metadata" poster="assets/access-poster.jpg">
+            <source src="assets/access-placeholder.mp4" type="video/mp4">
+            お使いのブラウザは動画再生に対応していません。
+          </video>
+          <p class="movie-caption">※現在は仮動画です。実際の行き方動画に差し替える場合は、<span class="number-font">assets/access-placeholder.mp4</span> を同名で置き換えてください。</p>
+        </div>
+      </section>
+
+      <section id="rsvp" class="section fade-in" aria-labelledby="rsvp-title">
+        <p class="section-kicker">RSVP</p>
+        <h2 id="rsvp-title">Reply Form</h2>
+        <p class="section-note">恐れ入りますが、挙式・披露宴それぞれの<br class="sp-only">ご出欠をご回答ください。</p>
+        <div class="rsvp-shell">
+          <form id="rsvpForm" class="rsvp-form" novalidate>
+            <input type="hidden" id="guestId" name="guestId" value="">
+            <div class="form-grid">
+              <div class="field"><label for="name">氏名 <span class="required">*</span></label><input id="name" name="name" type="text" value="" autocomplete="name" readonly required></div>
+              <div class="field"><label for="email">メールアドレス <span class="required">*</span></label><input id="email" name="email" type="email" autocomplete="email" required placeholder="example@example.com"></div>
+            </div>
+            <div class="radio-grid">
+              <fieldset class="radio-field"><legend>挙式 <span class="required">*</span></legend><div class="radio-options"><label class="radio-option"><input type="radio" name="ceremonyAttendance" value="出席" required>出席</label><label class="radio-option"><input type="radio" name="ceremonyAttendance" value="欠席">欠席</label></div></fieldset>
+              <fieldset class="radio-field"><legend>披露宴 <span class="required">*</span></legend><div class="radio-options"><label class="radio-option"><input type="radio" name="receptionAttendance" value="出席" required>出席</label><label class="radio-option"><input type="radio" name="receptionAttendance" value="欠席">欠席</label></div></fieldset>
+            </div>
+            <fieldset class="radio-field allergy-field">
+              <legend>アレルギー <span class="required">*</span></legend>
+              <div class="radio-options">
+                <label class="radio-option"><input type="radio" name="allergyChoice" value="あり" required>あり</label>
+                <label class="radio-option"><input type="radio" name="allergyChoice" value="なし">なし</label>
+              </div>
+            </fieldset>
+            <div id="allergyDetailsField" class="field allergy-details is-hidden">
+              <label for="allergyDetails">アレルギーの詳細 <span class="required">*</span></label>
+              <textarea id="allergyDetails" name="allergyDetails" placeholder="例：えび、かに、落花生"></textarea>
+            </div>
+            <div class="field"><label for="guestMessage">メッセージ</label><textarea id="guestMessage" name="message" placeholder="新郎新婦へのメッセージがあればご入力ください。"></textarea></div>
+            <div class="submit-area"><button id="submitButton" class="primary-button" type="submit">Send Reply</button><p id="formStatus" class="form-status" aria-live="polite"></p></div>
+          </form>
+          <div id="thanksMessage" class="thanks-card is-hidden" aria-live="polite"><strong>ご回答ありがとうございました！</strong><p>当日お会いできますことを、心より楽しみにしております。</p></div>
+        </div>
+      </section>
+      <footer class="footer"><p class="signature">Yusuke &amp; Aika</p><p><span class="number-font">2027.03.21</span></p></footer>
+    </div>
+
+    <section id="profilePage" class="page-view sub-page is-hidden" data-page="profile" aria-labelledby="profile-title">
+      <div class="page-intro fade-in is-visible">
+        <p class="page-kicker">Profile</p>
+        <h2 id="profile-title" class="page-title">About Us</h2>
+      </div>
+      <div class="blank-card fade-in is-visible" aria-label="2人の紹介ページ"></div>
+      <footer class="footer"><p class="signature">Yusuke &amp; Aika</p><p><span class="number-font">2027.03.21</span></p></footer>
+    </section>
+
+    <section id="finalPuzzlePage" class="page-view sub-page is-hidden" data-page="final-puzzle" aria-labelledby="final-title">
+      <div class="page-intro fade-in is-visible">
+        <p class="page-kicker">Final Puzzle</p>
+        <h2 id="final-title" class="page-title">The Last Mystery</h2>
+      </div>
+      <div id="finalPuzzleContent" class="blank-card fade-in is-visible" aria-label="本当の最後の謎ページ"></div>
+      <footer class="footer"><p class="signature">Yusuke &amp; Aika</p><p><span class="number-font">2027.03.21</span></p></footer>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
