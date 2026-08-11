@@ -2,7 +2,7 @@ window.WEDDING_CONFIG = {
   repoName: 'invitation-test3',
   baseInvitationUrl: 'https://Yusuke-Aika-Wedding.github.io/invitation-test3/',
   // GASをデプロイしたら、ここにWebアプリURLを貼り付けてください。
-  gasWebAppUrl: 'PASTE_YOUR_GAS_WEB_APP_URL_HERE',
+  gasWebAppUrl: 'https://script.google.com/macros/s/AKfycbwzSt6gRw6Vlf8aJa4urcOVNOrK6h08llnWv1ufEVWGPMfdPDTUoVW4WnECR9-sFo_Y/exec',
   weddingDateIso: '2027-03-21T10:00:00+09:00',
   // 本当の最後の謎をメニューに表示する日時です。この1行だけで変更できます。
   finalPuzzleOpenIso: '2026-08-11T18:30:00+09:00',
